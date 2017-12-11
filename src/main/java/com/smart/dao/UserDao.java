@@ -23,7 +23,7 @@ public class UserDao {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public int getMatchCount(String userName, String password) {
+    public int getMatchCount(String userName,String password) {
         return jdbcTemplate.queryForObject(MATCH_COUNT_SQL, new Object[]{userName, password}, Integer.class);
     }
 
